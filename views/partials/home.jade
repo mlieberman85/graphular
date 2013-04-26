@@ -1,0 +1,24 @@
+//
+   Created with JetBrains WebStorm.
+   User: mlieberman
+   Date: 3/27/13
+   Time: 5:56 PM
+   To change this template use File | Settings | File Templates.
+
+div(ng-controller="GraphCtrl")
+    .container(fade-in='fade-in')
+        #hero-container.container
+            .hero-unit
+                h1 Graphular
+                p Blah blah blah
+                br
+                p
+                    small
+                        | Blah blah blah
+                br
+                .pull-left
+                    section.clearfix
+
+    div(ng-repeat="graph in graphs")
+        div(rickshaw, graph="graph", type="line")
+            .graph
