@@ -45,7 +45,14 @@ directives.directive("rickshaw", function(){
           data: scope.data
         }]
 
-      })
+      });
+      var x_axis = new Rickshaw.Graph.Axis.Time({graph: graph});
+      var y_axis = new Rickshaw.Graph.Axis.Y({
+        graph: graph,
+        orientation: 'left',
+        tickFormat: Rickshaw.Fixtures.Number.formatKMBT,
+        element: element.find('.y_axis')[0]
+      });
       graph.setRenderer("line");
       graph.render();
     }

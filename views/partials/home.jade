@@ -5,6 +5,24 @@
    Time: 5:56 PM
    To change this template use File | Settings | File Templates.
 
+style
+  #graph_container {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .graph {
+    position: relative;
+    left: 40px;
+  }
+
+  .y_axis {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+  }
+
 div(ng-controller="GraphCtrl")
     .container(fade-in='fade-in')
         #hero-container.container
@@ -20,5 +38,6 @@ div(ng-controller="GraphCtrl")
                     section.clearfix
 
     div(ng-repeat="graph in graphs")
-        div(rickshaw, graph="graph", type="line")
+        div(rickshaw id="graph_container", graph="graph", type="line")
+            .y_axis
             .graph
